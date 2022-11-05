@@ -43,6 +43,11 @@ function App() {
 	// 	e.preventDefault();
 	// 	console.log("submit form");
 	// };
+
+	// one line validation below example
+	let eamilSchema = yup.string().min(5).max(12).email();
+	console.log(eamilSchema.isValidSync("a@gmail.com"));
+	/////////
 	let registerForSchema = yup.object().shape({
 		name: yup.string().required().min(3),
 		username: yup.string().required().min(6),
